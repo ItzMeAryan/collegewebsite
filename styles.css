@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #003366;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.college-info {
+    text-align: left;
+}
+
+nav {
+    background-color: #004080;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.carousel img {
+    display: none;
+    width: 100%;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+    display: block;
+    opacity: 1;
+}
+
+
+
+.notice-board {
+    width: 600px; /* Adjust width as per your layout */
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+}
+
+.notice-header {
+    background-color: #353862;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.notice-content {
+    margin-top: 40px; /* Adjust this margin to create space below the header */
+    padding: 10px;
+}
+
+
+.about-director {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10%;
+}
+
+.about {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.director {
+    width: 25%;
+    text-align: center;
+}
+
+.director img {
+    width: 100%;
+    border-radius: 25%;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,135 @@
+<!-- create a web page that display college information using stylesheet. -->
+
+<!-- header with logo and college name and address
+the navigation bar with home department about contact 
+
+beoiw it a caraousel of 10 pics with 70%wdth and left 30% notices marquee
+beow this thing
+left and right 20% empty and in between about college and pics of director right side - director
+
+below a footer copyright time abnd important links -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ 
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="logo.png" alt="College Logo" class="logo">
+        <div class="college-info">
+            <h1>Dr. B.R. Ambedkar National Institute of Technology</h1>
+            <p>Jalandhar, Punjab, India</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Department</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+        <div class="content">
+            <!-- Carousel Section -->
+            <div class="carousel">
+                <img src="pic1.jpg" alt="Image 1" class="carousel-img active">
+                <img src="pic2.png" alt="Image 2" class="carousel-img">
+                <img src="pic3.jpg" alt="Image 3" class="carousel-img">
+                <img src="pic4.jpeg" alt="Image 4" class="carousel-img">
+                <img src="pic5.jpg" alt="Image 5" class="carousel-img">
+                <img src="pic6.jpg" alt="Image 6" class="carousel-img">
+                <img src="pic7.jpg" alt="Image 7" class="carousel-img">
+                <img src="pic8.jpg" alt="Image 8" class="carousel-img">
+                <img src="pic9.png" alt="Image 9" class="carousel-img">
+                <img src="pic10.jpg" alt="Image 10" class="carousel-img">
+            </div>
+            
+
+            <!-- Notices Marquee -->
+            <div class="notice-board">
+                <div class="notice-header">Notices</div>
+                <marquee class="notice-content" behavior="scroll" direction="up" scrollamount="2">
+                    <p>Notice 1: Admission dates extended till Sept 15.</p>
+                    <p>Notice 2: Annual fest starting on Oct 10.</p>
+                    <p>Notice 3: New library timings from 9 AM to 8 PM.</p>
+                    <p>Notice 4: Campus recruitment drive on Sept 20.</p>
+                    <p>Notice 5: Hostel registration open for the next semester.</p>
+                    <p>Notice 6: Yoga and wellness workshop on Sept 5.</p>
+                    <p>Notice 7: Mid-term exams scheduled from Sept 25.</p>
+                    <p>Notice 8: Blood donation camp on Sept 30.</p>
+                    <p>Notice 9: Sports trials for cricket and football on Sept 12.</p>
+                    <p>Notice 10: Semester fee payment deadline is Sept 18.</p>
+                </marquee>
+            </div>
+            
+        </div>
+
+        <!-- About and Director Section -->
+        <div class="about-director">
+            <div class="about">
+                <h2>About the College</h2>
+                <p >Dr. B.R. Ambedkar National Institute of Technology (NIT) Jalandhar is a premier engineering institute located in Jalandhar, Punjab. Established in 1987, it is one of the 31 NITs in India and was granted the status of an Institute of National Importance in 2007. NIT Jalandhar offers undergraduate, postgraduate, and doctoral programs in various engineering disciplines, sciences, and management.</p>
+
+                <p>The campus spans over 154 acres, providing state-of-the-art facilities, including well-equipped laboratories, a central library, hostels, and sports complexes. The institute is known for its vibrant student culture, with various clubs and societies promoting extracurricular activities and innovation.</p>
+                    
+                <p>The undergraduate program is based on the Joint Entrance Examination (JEE) Main, and admissions to postgraduate programs are primarily through GATE and other national-level exams. NIT Jalandhar is also actively involved in research and collaborations with industries and institutions worldwide, promoting research excellence and innovation.</p>
+                    
+                <p>The Training and Placement Cell of the institute maintains strong connections with top companies, facilitating impressive placement records across various engineering and technological fields. NIT Jalandhar is dedicated to fostering academic excellence, professional skills, and holistic development among students, preparing them for successful careers in the global industry.</p>
+            </div>
+            <div class="director">
+                <h2>Director</h2>
+                <img src="di.jpg" alt="Director" class="director-pic">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Dr. B.R. Ambedkar NIT Jalandhar. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Important Links</a>
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-img');
+const totalImages = images.length;
+
+function showImage(index) {
+    images.forEach((img, i) => {
+        img.classList.remove('active');
+        if (i === index) {
+            img.classList.add('active');
+        }
+    });
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    showImage(currentIndex);
+}
+
+// Initial display
+showImage(currentIndex);
+
+// Change image every 5 seconds
+setInterval(nextImage, 5000);
+
+    </script>
+</body>
+</html>
